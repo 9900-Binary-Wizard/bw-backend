@@ -1,0 +1,27 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /api/v1
+
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/postgres?
+    username: postgres
+    password: admin
+  flyway:
+    enabled: true
+    schemas:
+  jpa:
+    properties:
+      hibernate:
+        default_schema:
+        jdbc:
+          time_zone: UTC
+    show-sql: true
+
+logging:
+  pattern:
+    dateFormat: yyyy-MM-dd HH:mm:ss.SSS ZZZ
+  level:
+    com.wizard: debug
